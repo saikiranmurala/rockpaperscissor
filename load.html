@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <title>Rock Paper Scissor Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rps.css">
+    
+</head>
+<body>
+    <video id="background-video" autoplay loop muted>
+        <source src="44.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+       <h1>Rock Paper Scissor Game:</h1>
+        <br>
+        <h3>choose your move</h3>
+        <br>
+        <br>
+        <div class="weapons">
+            <button onclick="checker('rock')">
+                <i class="far fa-hand-rock"></i>
+            </button>
+            <button onclick="checker('paper')">
+                <i class="far fa-hand-paper"></i>
+            </button>
+            <button onclick="checker('scissor')">
+                <i class="far fa-hand-scissors"></i>
+            </button>
+        </div>
+        <br>
+        <br>
+        <div class="scores">
+            <p>Computer : 
+                <span id="computer_score">0</span>
+            </p>
+            <p>
+                user :
+                <span id="user_score">0</span>
+            </p>
+        </div>
+        <div class="details">
+            <p id="user_choice"></p>
+            <p id="comp_choice"></p>
+            <p id="result"></p>
+        </div>
+        <button type="button" onclick="reload()">Play Again</button>
+        <button onclick="playNTimes()">Stop</button>
+        <div id="overall-result"></div>
+
+
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>
